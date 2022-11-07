@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Deals
+{% endblock %}
+
+{% block main %}
+    <form action="/deals" method="post">
+        Laptop
+        <br><div class="strikethrough">$200</div>$100
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_ku49g6dO-GGX3tFlIkn77mYY89JkBT5-A&usqp=CAU" class="pictures" alt="Laptop">
+        <br><br> Great laptop for students!
+        <br><br><input name="lq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="laptop" value="Laptop" class="btn btn-light" type="submit">Add To Cart</button>
+        <br><br> Headphones
+        <br><div class="strikethrough">$70</div>$50
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnInHRb7K2h23FY-CKXuORIA1CqiSQfQaMdw&usqp=CAU" class="pictures" alt="Headphones">
+        <br><br> Perfect headphones for working out at the gym or just relaxing at home
+        <br><br><input name="hq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="hp" value="Headphones" class="btn btn-light" type="submit">Add To Cart</button>
+        <br><br> Necklace
+        <br><div class="strikethrough">$120</div>$80
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0v-43ucXULYR0AMCBRlHC-Xh4BvUwlvElbQ&usqp=CAU" class="pictures" alt="Sweatshirt">
+        <br><br> Elegent handcrafted necklace
+        <br><br><input name="nq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="neck" value="Necklace" class="btn btn-light" type="submit">Add To Cart</button>
+        <br><br> Sweatshirt
+        <br><div class="strikethrough">$50</div>$30
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqsMqNsmdtUvYpACY4PVtaGiKL_qN9hmJQ2w&usqp=CAU" class="pictures" alt="Sweatshirt">
+        <br><br> Incredibly cozy and fits perfect for any size!
+        <br><br><input name="sq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="swt" value="Sweatshirt" class="btn btn-light" type="submit">Add To Cart</button>
+    </form>
+{% endblock %}

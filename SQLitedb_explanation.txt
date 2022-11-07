@@ -1,0 +1,21 @@
+Below are the specific tables I used in my catalog.db sqlite database
+
+CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, pass_hash TEXT NOT NULL, cash
+NUMERIC NOT NULL DEFAULT 20000.00);
+
+CREATE TABLE sqlite_sequence(name,seq);
+
+CREATE UNIQUE INDEX username ON users (username); -> used to speed up select requests on username
+
+CREATE TABLE cart(cart_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, item TEXT NOT NULL, cost
+REAL NOT NULL, quantity INT NOT NULL, cost_tot REAL NOT NULL, FOREIGN KEY (user_id) REFERENCES users(id));
+
+CREATE TABLE orders(order_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, cost REAL NOT NULL, time
+TEXT NOT NULL, FOREIGN KEY (user_id) REFERENCES users(id));
+
+CREATE TABLE complaints(complaints_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, type TEXT NOT
+NULL, complaint TEXT NOT NULL, FOREIGN KEY (user_id) REFERENCES users(id));
+
+Notes:
+- most tables have a foreign key linking them to the users table so any interaction can be traced back to a user
+- primary keys are autoincremented so each of them is unique and they don't need to be manually incremented upon inserting data
