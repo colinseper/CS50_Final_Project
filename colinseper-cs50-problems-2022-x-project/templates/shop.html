@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Shop
+{% endblock %}
+
+{% block main %}
+    <form action="/shop" method="post">
+        Book
+        <br> $5.95
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF_aAzwa8jFQ9xVK11UFXUkcZ4_2h6pyNVLQ&usqp=CAU" class="pictures" alt="Books">
+        <br><br> A book selected from the top 100 bestsellers of 2021!
+        <br><br><input name="bq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="book" value="Book" class="btn btn-light" type="submit">Add To Cart</button>
+        <br><br> Water Bottle
+        <br> $3.25
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzETKVXsq1RS72VxqK4A-imZu7U0eLERfYHA&usqp=CAU" class="pictures" alt="Water Bottle">
+        <br><br> Standard water bottle, 32 oz
+        <br><br><input name="wbq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="wbot" value="Water Bottle" class="btn btn-light" type="submit">Add To Cart</button>
+        <br><br> Chessboard
+        <br> $15.00
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR40hq979DjSyQrqPlUfLh9Wjz5IjJQtW73ig&usqp=CAU" class="pictures" alt="Chessboard">
+        <br><br> Elegantly made chessboard, great for any experienced player or someone new to the game (pieces included)
+        <br><br><input name="cq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="cb" value="Chessboard" class="btn btn-light" type="submit">Add To Cart</button>
+        <br><br> Hammock
+        <br> $20.00
+        <br><br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA3eS90nJfX5BgESmFB77Fu3ubt9ULopjOeg&usqp=CAU" class="pictures" alt="Hammock">
+        <br><br> Great to relax and have fun with friends, easy to put up anywhere
+        <br><br><input name="hq" type="number" min="1" placeholder="Quantity">
+        <br><br><button name="hck" value="Hammock" class="btn btn-light" type="submit">Add To Cart</button>
+    </form>
+{% endblock %}

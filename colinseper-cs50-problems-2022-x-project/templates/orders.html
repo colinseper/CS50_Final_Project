@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Orders
+{% endblock %}
+
+{% block main %}
+<table class="table table-bordered table-light">
+    <thead>
+        <tr>
+            <th scope="col">Order #</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if (orders | length) > 0 %}
+            {% for order in orders %}
+                <tr>
+                    <th scope="row"> {{ order[0] }} </th>
+                    <td> ${{ order[1] }} </td>
+                    <td> {{ order[2] }} </td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}

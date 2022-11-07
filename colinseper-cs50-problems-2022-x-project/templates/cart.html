@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Cart
+{% endblock %}
+
+{% block main %}
+    <table class="table table-bordered table-light">
+        <thead>
+            <tr>
+                <th scope="col">Cart #</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col">Remove from Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- none statement check -->
+            {% if (cart | length) > 0 %}
+                {% for item in cart %}
+                    <tr>
+                        <th scope="row"> {{ item[0] }} </th>
+                        <td> {{ item[1] }} </td>
+                        <td> ${{ item[2] }} </td>
+                        <td> {{ item[3] }} </td>
+                        <td> ${{ item[4] }} </td>
+                        <td><form action="/cart" method="post"><button name="remove" value=" {{ item[0] }}" class="btn btn-primary" type="submit">Remove</button></form></td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    <form action="/cart" method="post">
+        <br><br><button name="checkout" class="btn btn-light" type="submit">Checkout</button>
+    </form>
+{% endblock %}

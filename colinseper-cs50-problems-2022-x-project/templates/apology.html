@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!-- https://memegen.link/ -->
+    <!-- /custom allows you to create the top and bottom code while setting an alt which is the new image -->
+    <!-- review helpers.py for the variables passed-->
+    <!-- urnlen encodes the string to be used in the url-->
+    <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://api.memegen.link/images/ams.jpg&width=600" title="{{ top }}">
+{% endblock %}
