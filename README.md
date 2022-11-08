@@ -1,4 +1,5 @@
 # Carted: An Online Shopping Center
+#### Video Demo:  <URL https://youtu.be/kSnckQuBwn8>
 #### Description:
 My project is Carted: An Online Shopping Center. My project is a full-stack web application which allows users to create an account buy items, checkout or delete them from her cart, check order history and contact the website if their is an issue. For my project I used Python, Flask, Html, CSS, SQLite and the Bootstrap framework. I will first describe my Python code, then Html, Flask, Bootstrap and CSS, and my SQLite database. For reference a lot of specific explanations can be found within comments in the code or in the case of the SQLite database can be found in the SQLitedb_explanation text file.
 
